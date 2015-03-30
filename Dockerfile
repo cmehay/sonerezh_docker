@@ -14,7 +14,7 @@ ADD     update_links /update_links
 
 RUN     apt-get -y update && \
         apt-get -y dist-upgrade && \
-        apt-get -y install nginx php5-fpm php5-gd php5-mysql libav-tools supervisor git inotify-tools
+        apt-get -y install nginx php5-fpm php5-gd php5-mysql libav-tools supervisor git inotify-tools ca-certificates
 
 RUN     rm /etc/nginx/sites-enabled/default
 
