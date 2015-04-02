@@ -5,5 +5,8 @@ DIR_TO=${MUSIC_LINKS}
 
 for file in $DIR_FROM/**
 do
-    ln -s $file $DIR_TO/$(echo -n $file | sha1sum | cut -c -40).${file##*.}
+	if [[ -f "$file" ]] ; then
+		ln -s "$file" "$DIR_TO/$(echo -n $file | sha1sum | cut -c -40).${file##*.}"
+	fi
+	echo "last update at $(time)"
 done

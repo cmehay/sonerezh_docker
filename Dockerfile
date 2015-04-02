@@ -11,6 +11,7 @@ ENV     MUSIC_LINKS /music_links
 
 ADD     etc /etc
 ADD     update_links /update_links
+RUN     chmod +x /update_links
 
 RUN     apt-get -y update && \
         apt-get -y dist-upgrade && \
