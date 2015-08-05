@@ -12,7 +12,7 @@ docker run --name mariadb -e MYSQL_ROOT_PASSWORD=rootpass -e MYSQL_USER=sonerezh
 And run sonereizh container like this ♥
 
 ```sh
-docker run -P -d --link mariadb:mariadb --name sonerezh -v /path/to/music:/music:ro goldy/sonerezh
+docker run -p hostPort:80 -d --link mariadb:mariadb --name sonerezh -v /path/to/music:/music:ro goldy/sonerezh
 ```
 
 
